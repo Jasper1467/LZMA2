@@ -15,8 +15,8 @@ namespace data {
 	public:
 		//Shared Pointer interface implementation
 		std::shared_ptr<RawObject> GetPtr() { return shared_from_this(); }
-		[[nodiscard]] static std::shared_ptr<RawObject> Create() { return std::shared_ptr<RawObject>(new RawObject()); }
-		[[nodiscard]] static std::shared_ptr<RawObject> Create(const PATH p, const void* data, const size_t size) { return std::shared_ptr<RawObject>(new RawObject(p, data, size)); }
+		[[nodiscard]] static std::shared_ptr<RawObject> Create() { return std::make_shared<RawObject>(); }
+		[[nodiscard]] static std::shared_ptr<RawObject> Create(const PATH& p, const void* data, const size_t size) { return std::make_shared<RawObject>(p, data, size); }
 
 		//Create data from file path.
 		static std::shared_ptr<RawObject> LoadFile(const PATH& p);
@@ -36,11 +36,11 @@ namespace data {
 		inline void SetPath(const PATH& p){ _path = p; }
 		//uint8 byte for easy offset.
 		inline const char* GetBytes() const
-			{ return reinterpret_cast<const char*>(_data); }
+			{ return static_cast<const char*>(_data); }
 		inline size_t size() const { return _size; }
 	private:
 		RawObject() = default;
-		RawObject(const PATH p, const void* data, const size_t size)
+		RawObject(const PATH& p, const void* data, const size_t size)
 			:_path(p), _data(data), _size(size) {}
 		const void* _data = nullptr;
 		PATH _path = PATH();

@@ -28,7 +28,7 @@ namespace data {
 
 	std::shared_ptr<RawObject> RawObject::Adopt(const PATH& p, const void* data, size_t length){
 		if (length == 0) { return MakeEmpty(); }
-		return std::shared_ptr<RawObject>(new RawObject(p, data, length));
+		return std::make_shared<RawObject>(p, data, length);
 	}
 
 	std::shared_ptr<RawObject> RawObject::Copy(const PATH& p, const void* data, size_t length) {
