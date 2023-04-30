@@ -1,0 +1,83 @@
+{
+    "DecisionTree": {
+        "Author": "Omo",
+        "ID": "eaa4f618-fea2-43a7-86c8-4420c0183ad5",
+        "Date": "2023-04-26T00:00:00.000Z",
+        "Copyright": "&copy; Omo.",
+        "Warnings": {
+            "HAND HOLDING": 0
+        },
+        "ExitPoints": [
+            "Exit",
+            "Return"
+        ],
+        "CharIDs": [
+            "MC"            
+        ],
+        "Comments": {
+            "Comments on Comments": "Comments are a map of comment shorts and comment long forms. Comments are not displayed to the player, however anyone can mine the data files. So use Comments wisely. All Comments for a node must be in the Comments block of that node.",
+            "Copyright": "You may use any Copyright you wish, but if you are submitting to the Dynamic Life team, please give us the right to distribute and modify your writing."
+        },
+        "Root": {
+            "ExitPoints": [
+                "Exit",
+                "Return"
+            ],
+            "Bloom": [
+                {
+                    "ExitPoints": [
+                        "Exit",
+                        "Return"
+                    ],
+                    "HTML": true,
+                    "text": [
+                        "In which hands are held, for better or worse."
+                    ]
+                }
+            ],
+            "Branches": [
+                {
+                    "Brief": "[Lorem Ipsum Time!]",
+                    "CharIDs": [
+                        "Lorem Ipsum"
+                    ],
+                    "ExitPoints": [
+                        "Exit",
+                        "Return"
+                    ],
+                    "Comments": {
+                        "Branch Name comment": "Branches can have any arbitrary name, however Pipe | character is not allowed. Primarily used to reference them. Must be unique inside tree.",
+                        "Branch comment": "Branches are the primary structure of the tree.",
+                        "Brief comment": "Each branch has a Brief description that is used in selection of the branch. It may be as simple as [Next] or [Continue], but may be as complicated as [You reach for the fruit, pluck it from the tree, and eat it.] Please keep it under 127 characters so that it will fit on a single line. This will not be enforced, so break this rule of thumb if necessary.",
+                        "Leaves cocmment": "The bulk of the actual writing is done in leaf form. Leaves are a flat structure, in order. They can contain no branching structures or other content, however they can be flagged or tagged with Warnings."
+                    },
+                    "Branches": [
+                        {
+                            "ExitPoints": [
+                                "Exit",
+                                "Return"
+                            ],
+                            "Comments": {
+                                "Leaf text comment": "Raw text of the section, hard capped at 8000 characters. If you go over this amount, the text will not be displayed to the player.",
+                                "Lorem Ipsum Continued": "Note that  I continued Lorem ipsum from one leaf onto another, as one leaf per paragraphs. You can use more than one paragraph in a leaf, but this may make things easier."
+                            },
+                            "Bloom": [
+                                {
+                                    "ExitPoints": [
+                                        "Exit",
+                                        "Return"
+                                    ],
+                                    "HTML": true,
+                                    "text": [
+                                        "Lorem ipsum dolor sit amet consectetur adipiscing elit hendrerit integer, ultricies vulputate et netus penatibus felis natoque fermentum fusce, velit libero pharetra interdum lacus nec justo platea. Porta arcu convallis sed consequat turpis facilisis aenean phasellus vestibulum conubia felis, praesent semper pharetra urna justo netus aliquet vehicula class. Molestie congue senectus elementum mi nam consequat eleifend justo duis praesent hac, torquent himenaeos ad suscipit condimentum cursus neque aptent ullamcorper.",
+                                        "Porta conubia auctor lacus donec vestibulum, molestie libero tellus venenatis at massa, egestas litora luctus consequat. Dictum pellentesque vehicula molestie etiam felis sem fermentum aptent penatibus egestas varius, ante mollis per luctus tempus maecenas turpis mi morbi justo eleifend, vitae augue nisi ut arcu natoque consequat habitasse iaculis rutrum. Bibendum ultrices pellentesque quis scelerisque magnis arcu justo ut integer, dignissim interdum sodales aliquet at cubilia posuere vestibulum, sagittis platea conubia inceptos malesuada eget viverra enim."
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
